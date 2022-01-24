@@ -1,0 +1,24 @@
+h1,
+p {
+  font-family: Lato;
+}
+.img-wrapper {
+  overflow: hidden;
+}
+
+.float-container {
+  border: 5px;
+  padding: 0px;
+}
+
+.float-child {
+  width: 98%;
+  float: left;
+  padding: 20px;
+  border: 2px solid;
+}
+
+img.hover-zoom:hover {
+  transform-origin: center;
+  transform: scale(1.75);
+}
