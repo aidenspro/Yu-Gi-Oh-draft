@@ -16,8 +16,15 @@ p {
   float: left;
   padding: 20px;
   border: 2px solid;
+  background-color: black;
 }
 
+.unselected-button{
+  color: gray
+}
+.selected-button{
+  color: blue
+}
 img.hover-zoom:hover {
   transform-origin: center;
   transform: scale(1.75);

@@ -1,11 +1,8 @@
 import React from 'react';
 import React, { useEffect, useState } from 'react';
-import Dropzone from 'react-dropzone'
+import Dropzone from 'react-dropzone';
 
 import '../style.css';
-
-
-
 
 //fetches the json informatrion from the yo-gi-oh API and returns that Json object
 async function fetchJson() {
@@ -27,7 +24,6 @@ function makeCard(card) {
       className="hover-zoom"
       height={200}
       width={150}
-      
     />
   );
 }
@@ -61,8 +57,8 @@ export default function cards() {
 
   //console.log("in app" , card)
   return (
-    <div class="float-child">
-      {stackCards(1)}{stackCards(1)}{stackCards(1)}
+    <div className="float-child">
+      {stackCards(1)}
     </div>
   );
   //return(<div></div>)
