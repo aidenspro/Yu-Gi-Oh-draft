@@ -23,7 +23,7 @@ p {
   color: gray
 }
 .selected-button{
-  color: blue
+  background-color: rgb(119, 119, 231)
 }
 img.hover-zoom:hover {
   transform-origin: center;

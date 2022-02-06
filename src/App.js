@@ -1,10 +1,9 @@
 import React from 'react';
 import React, { useEffect, useState } from 'react';
 import Cards from './Components/cards';
-import Dropzone from 'react-dropzone';
 import DraftedCards from './Components/draftedCards';
 import SearchBar from './Components/searchBar';
-import NumButtons from './Components/numButttons';
+import NumButtons from './Components/numButtons';
 import './style.css';
 
 export default function App() {
