@@ -6,11 +6,18 @@ import SearchBar from './Components/searchBar';
 import NumButtons, { buttValue } from './Components/numButtons';
 import './style.css';
 
+var numCards = 1;
+
+
 export default function App() {
-  
-  var numCards = buttValue;
-  console.log(buttValue);
-  
+  if(buttValue === undefined ){
+    buttValue = 1;
+  }
+
+  numCards = buttValue;
+
+  console.log(numCards);
+
   return (
     <div id="topDiv">
 
@@ -21,7 +28,7 @@ export default function App() {
     <div id="randomCards">
 
       <NumButtons />
-      <Cards />
+      <Cards num={numCards}/>
       <DraftedCards />
 
     </div>

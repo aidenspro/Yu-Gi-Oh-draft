@@ -4,7 +4,7 @@ import NumButtons, { buttValue } from '../Components/numButtons';
 
 import '../style.css';
 
-var num = buttValue;
+var num = 1;
 
 //fetches the json informatrion from the yo-gi-oh API and returns that Json object
 async function fetchJson() {
@@ -56,15 +56,16 @@ function stackCards(amountOfCards) {
 
 function checkNum() {
   num = buttValue;
+  
 }
 
 export default function cards() {
+  
   const card = getCard();
-  console.log(num);
-  useEffect(() => {
-    checkNum();
-  }, [num]);
+  //console.log(num);
+  
   //console.log("in app" , card)
   return <div className="float-child">{stackCards(num)}</div>;
   //return(<div></div>)
+  
 }

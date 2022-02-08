@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useState } from 'react';
 
 var num = 1;
 
@@ -8,6 +9,7 @@ const changeColor1 = () => {
   document.getElementById('button3').className = 'unselected-button';
   num = 1;
   console.log(num);
+  
 };
 const changeColor2 = () => {
   document.getElementById('button2').className = 'selected-button';
@@ -15,6 +17,7 @@ const changeColor2 = () => {
   document.getElementById('button3').className = 'unselected-button';
   num = 2;
   console.log(num);
+  
 };
 const changeColor3 = () => {
   document.getElementById('button3').className = 'selected-button';
@@ -22,6 +25,7 @@ const changeColor3 = () => {
   document.getElementById('button1').className = 'unselected-button';
   num = 3;
   console.log(num);
+  
 };
 
 const numButtons = () => (
