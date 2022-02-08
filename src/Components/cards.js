@@ -1,8 +1,10 @@
 import React from 'react';
 import React, { useEffect, useState } from 'react';
-import Dropzone from 'react-dropzone';
+import NumButtons, { buttValue } from '../Components/numButtons';
 
 import '../style.css';
+
+var num = buttValue;
 
 //fetches the json informatrion from the yo-gi-oh API and returns that Json object
 async function fetchJson() {
@@ -52,14 +54,17 @@ function stackCards(amountOfCards) {
   return cards;
 }
 
+function checkNum() {
+  num = buttValue;
+}
+
 export default function cards() {
   const card = getCard();
-
+  console.log(num);
+  useEffect(() => {
+    checkNum();
+  }, [num]);
   //console.log("in app" , card)
-  return (
-    <div className="float-child">
-      {stackCards(1)}
-    </div>
-  );
+  return <div className="float-child">{stackCards(num)}</div>;
   //return(<div></div>)
 }

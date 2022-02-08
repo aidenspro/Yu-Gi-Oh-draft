@@ -3,11 +3,14 @@ import React, { useEffect, useState } from 'react';
 import Cards from './Components/cards';
 import DraftedCards from './Components/draftedCards';
 import SearchBar from './Components/searchBar';
-import NumButtons from './Components/numButtons';
+import NumButtons, { buttValue } from './Components/numButtons';
 import './style.css';
 
 export default function App() {
-  //console.log("in app" , card)
+  
+  var numCards = buttValue;
+  console.log(buttValue);
+  
   return (
     <div id="topDiv">
 
