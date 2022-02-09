@@ -1,13 +1,21 @@
 import React from 'react';
-import React, { useEffect, useState } from 'react';
-import NumButtons, { buttValue } from '../Components/numButtons';
+//import React, { useEffect, useState } from 'react';
 
 import '../style.css';
 
-var num = 1;
+class Cards extends React.Component {
+
+  constructor (){
+    super()
+    this.state = {
+      numCards: 0
+    }
+
+  }
+
 
 //fetches the json informatrion from the yo-gi-oh API and returns that Json object
-async function fetchJson() {
+async fetchJson() {
   const response = await fetch(
     'https://db.ygoprodeck.com/api/v7/randomcard.php'
   );
@@ -15,8 +23,9 @@ async function fetchJson() {
   return json;
 }
 
+
 //takes in a json object and makes an image object to input onto the webpage
-function makeCard(card) {
+makeCard(card) {
   const cID = card.id;
   const cName = card.name;
   return (
@@ -31,7 +40,7 @@ function makeCard(card) {
 }
 
 //asynchronously gets the card and returns the img object
-function getCard() {
+getCard() {
   const [card, setCard] = React.useState({});
 
   useEffect(() => {
@@ -45,27 +54,31 @@ function getCard() {
   return makeCard(card);
 }
 
-function stackCards(amountOfCards) {
-  const cards = [];
+
+
+stackCards(amountOfCards) {
+  const cardsList = [];
   for (var i = 0; i < amountOfCards; i++) {
-    cards[i] = getCard();
+    cardsList[i] = this.getCard();
   }
 
-  return cards;
+  return cardsList;
 }
 
-function checkNum() {
-  num = buttValue;
-  
+
+render(){
+  return <div className="float-child">Test</div>
 }
 
-export default function cards() {
-  
-  const card = getCard();
-  //console.log(num);
-  
-  //console.log("in app" , card)
-  return <div className="float-child">{stackCards(num)}</div>;
-  //return(<div></div>)
-  
 }
+var num = 1;
+
+
+
+export default Cards
+
+
+
+
+
+

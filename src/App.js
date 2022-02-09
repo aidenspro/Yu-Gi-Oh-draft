@@ -28,7 +28,7 @@ export default function App() {
     <div id="randomCards">
 
       <NumButtons />
-      <Cards num={numCards}/>
+      <Cards />
       <DraftedCards />
 
     </div>
