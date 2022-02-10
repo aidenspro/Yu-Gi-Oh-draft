@@ -9,32 +9,9 @@ import './style.css';
 
 
 function printCards(numCards){
-if(numCards == 1){
-return (
-  <div className="float-child">
-    <MakeOneRandomCard />
-    1
-  </div>
-)
-}else if(numCards == 2)
-return (
-  <div className="float-child">
-      <MakeOneRandomCard />
-      <MakeOneRandomCard />
-      2
-  </div>
-)
-else{
-  return (
-    <div className="float-child">
-      <MakeOneRandomCard />
-      <MakeOneRandomCard />
-      <MakeOneRandomCard />
-      3
-    </div>
-  )
+
 }
-}
+
 
 export default function App() {
   var [] = useState(0);

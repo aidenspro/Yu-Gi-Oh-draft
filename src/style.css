@@ -19,6 +19,28 @@ p {
   background-color: rgb(241, 11, 11);
 }
 
+.onecard{
+  width: 98%;
+  float: left;
+  padding: 20px;
+  border: 2px solid;
+  background-color: rgb(241, 11, 11);
+}
+.twocard{
+  width: 98%;
+  float: left;
+  padding: 20px;
+  border: 2px solid;
+  background-color: rgb(241, 11, 11);
+}
+.threecard{
+  width: 98%;
+  float: left;
+  padding: 20px;
+  border: 2px solid;
+  background-color: rgb(241, 11, 11);
+}
+
 .unselected-button{
   color: gray
 }

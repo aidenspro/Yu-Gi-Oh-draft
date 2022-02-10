@@ -27,7 +27,8 @@ function makeCard(card) {
   return (
     <img
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
-      alt={cName}
+      //alt={cName}
+      alt={'https://storage.googleapis.com/ygoprodeck.com/pics/' +1+ '.jpg'}
       className="hover-zoom"
       height={200}
       width={150}
@@ -40,5 +41,5 @@ function _render(card) {
 }
 
 export default function makeOneRandomCard() {
-  return <div> {makeCard(getJson())} </div>;
+  return  makeCard(getJson());
 }
