@@ -28,7 +28,8 @@ function makeCard(card) {
     <img
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
       //alt={cName}
-      alt={'https://storage.googleapis.com/ygoprodeck.com/pics/' +1+ '.jpg'}
+      src={"./images/cardBack"}
+      //alt={'' +1+ '.jpg'}
       className="hover-zoom"
       height={200}
       width={150}
