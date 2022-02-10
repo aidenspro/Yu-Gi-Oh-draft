@@ -40,6 +40,13 @@ p {
   border: 2px solid;
   background-color: rgb(241, 11, 11);
 }
+.placeholder {
+  width: 150;
+  height: 200;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://stackblitz.com/files/react-irx9rm/github/aidenspro/react-irx9rm/master/src/Components/images/cardBack.jpg");
+}
 
 .unselected-button{
   color: gray

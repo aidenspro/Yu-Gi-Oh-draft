@@ -26,11 +26,12 @@ function makeCard(card) {
   const cName = card.name;
   return (
     <img
-      //src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
+    
+      src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
       //alt={cName}
-      src={"./images/cardBack.jpg"}
+      
       //alt={'' +1+ '.jpg'}
-      className="hover-zoom"
+      className="placeholder"
       height={200}
       width={150}
     />
