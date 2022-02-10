@@ -7,7 +7,32 @@ import Example from './Components/testButton';
 import NumButtons, { buttValue } from './Components/numButtons';
 import './style.css';
 
-var numCards = 1;
+var numCards = 2;
+
+function printCards(){
+if(numCards == 1){
+return (
+  <div className="float-container">
+    <MakeOneRandomCard />
+  </div>
+)
+}else if(numCards == 2)
+return (
+  <div className="float-container">
+    <MakeOneRandomCard />
+    <MakeOneRandomCard />
+  </div>
+)
+else{
+  return (
+    <div className="float-container">
+      <MakeOneRandomCard />
+      <MakeOneRandomCard />
+      <MakeOneRandomCard />
+    </div>
+  )
+}
+}
 
 export default function App() {
   if (buttValue === undefined) {
@@ -18,6 +43,8 @@ export default function App() {
 
   console.log(numCards);
 
+  
+
   return (
     <div id="topDiv">
       <div id="searchStuff">
@@ -26,7 +53,9 @@ export default function App() {
 
       <div id="randomCards">
         <NumButtons />
-        <MakeOneRandomCard />
+        {
+        printCards()
+        }
         <DraftedCards />
         <Example />
       </div>
