@@ -16,7 +16,7 @@ p {
   float: left;
   padding: 20px;
   border: 2px solid;
-  background-color: black;
+  background-color: rgb(241, 11, 11);
 }
 
 .unselected-button{
