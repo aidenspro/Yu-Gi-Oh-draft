@@ -41,15 +41,11 @@ makeCard(card) {
 
 //asynchronously gets the card and returns the img object
 getCard() {
-  const [card, setCard] = React.useState({});
+  const [card, setCard] = useState(0);
 
+  
   useEffect(() => {
-    const getJson = async () => {
-      const card = await fetchJson();
-      setCard(card);
-    };
-    getJson();
-  }, []);
+    
 
   return makeCard(card);
 }
@@ -67,14 +63,14 @@ stackCards(amountOfCards) {
 
 
 render(){
-  return <div className="float-child">Test</div>
+  return <div className="float-child">{}</div>
 }
 
 }
 var num = 1;
 
 
-
+export {  };
 export default Cards
 
 
