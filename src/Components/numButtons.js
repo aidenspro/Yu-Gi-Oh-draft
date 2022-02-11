@@ -25,56 +25,41 @@ const changeColor3 = () => {
 };
 
 const cardDisplay = (numCards) => {
-  if (numCards == 1) {
-    changeColor1
+  var cardArray = [];
+
+
+    for(var i=0;i<numCards;i++){
+      cardArray[i] = (
+          <MakeOneRandomCard />
+      );
+    }
     return (
-      <div1 className="onecard">
-        <MakeOneRandomCard />
-        1
-      </div1>
+      cardArray
     );
-  } else if (numCards == 2){
-  changeColor2
-    return (
-      <div2 className="twocard">
-        <MakeOneRandomCard />
-        <MakeOneRandomCard />
-        2
-      </div2>
-    );
-    }else {
-      changeColor3
-    return (
-      <div3 className="threecard">
-        <MakeOneRandomCard />
-        <MakeOneRandomCard />
-        <MakeOneRandomCard />
-        3
-      </div3 >
-    );
-  }
+  
 };
 
 function numButtons() {
-  var [num, setNum] = useState(1);
+  var [num, setNum] = useState(5);
 
   useEffect(() => {    
     // Update the document title using the browser API    
     cardDisplay(num)});
 
-
   return(
   <div>
-    <button id="button1" className="unselected-button" onClick={changeColor1} onClick={() => setNum(1)}>
-      1{' '}
+    <button id="button1" className="unselected-button" onClick={changeColor1} onClick={() => setNum(5)}>
+      5{' '}
     </button>
-    <button id="button2" className="unselected-button" onClick={changeColor2} onClick={() => setNum(2)}>
-      2{' '}
+    <button id="button2" className="unselected-button" onClick={changeColor2} onClick={() => setNum(10)}>
+      10{' '}
     </button>
-    <button id="button3" className="unselected-button" onClick={changeColor3} onClick={() => setNum(3)}>
-      3{' '}
+    <button id="button3" className="unselected-button" onClick={changeColor3} onClick={() => setNum(25)}>
+      25{' '}
     </button>
+   <div className='float-child'>
     {cardDisplay(num)}
+    </div>
   </div>
   )
 }

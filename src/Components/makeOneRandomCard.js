@@ -31,7 +31,7 @@ function makeCard(card) {
       //alt={cName}
       
       //alt={'' +1+ '.jpg'}
-      className="placeholder"
+      className="placeholder hover-zoom"
       height={200}
       width={150}
     />

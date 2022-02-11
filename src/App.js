@@ -27,6 +27,7 @@ export default function App() {
   
 
   return (
+    <body className='bg'>
     <div id="topDiv">
       <div id="searchStuff">
         <SearchBar />
@@ -38,6 +39,7 @@ export default function App() {
         <Example />
       </div>
     </div>
+    </body>
   );
   //return(<div></div>)
 }
