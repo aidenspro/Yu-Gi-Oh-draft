@@ -12,8 +12,9 @@ const cardDisplay = (searchTerm) => {
   return <h1> &nbsp; No Search Result </h1>
 };
 
-function handleChange(e) {
-  this.setState({value: e.target.value})
+function submit(e) {
+  e.preventDefault();
+  () => setSearchTerm(document.getElementById("card-search").value)
 }  
 
 
@@ -23,7 +24,7 @@ function SearchBar(){
   
 
   return(
-  <form action="/" method="get">
+  <div>
     <h3>
       Search Cards
       </h3>
@@ -34,6 +35,7 @@ function SearchBar(){
       type="text"
       id="card-search"
       placeholder="Search Cards...."
+      
     />
     <button
     id="button1"
@@ -45,7 +47,7 @@ function SearchBar(){
     <div className="search-return">
     {cardDisplay(searchTerm)}
     </div>
-  </form>
+  </div>
   )
 }
 
