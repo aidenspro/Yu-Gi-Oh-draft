@@ -8,11 +8,6 @@ import NumButtons, { buttValue } from './Components/numButtons';
 import './style.css';
 
 
-function printCards(numCards){
-
-}
-
-
 export default function App() {
   var [] = useState(0);
 
@@ -35,7 +30,7 @@ export default function App() {
 
       <div id="float-container">
         <NumButtons />
-        {printCards()}
+        
         <Example />
       </div>
     </div>

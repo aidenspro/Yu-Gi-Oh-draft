@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+var key;
+
 function getJson() {
   const [card, setCard] = useState([]);
 
@@ -24,6 +26,7 @@ function getJson() {
 function makeCard(card) {
   const cID = card.id;
   const cName = card.name;
+  key = cID;
   return (
     <img
     
