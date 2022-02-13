@@ -9,7 +9,7 @@ const cardDisplay = (searchTerm) => {
   if(searchTerm.length > 1)
   return <SearchCard searchTerm ={searchTerm} />;
   else
-  return <text> No Result </text>
+  return <h1> &nbsp; No Search Result </h1>
 };
 
 function handleChange(e) {
@@ -42,7 +42,9 @@ function SearchBar(){
     onClick={() => setSearchTerm(document.getElementById("card-search").value)} 
     >Submit
     </button>
+    <div className="search-return">
     {cardDisplay(searchTerm)}
+    </div>
   </form>
   )
 }
