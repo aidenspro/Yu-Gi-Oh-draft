@@ -7,6 +7,7 @@ p {
 }
 
 .float-child {
+  cursor: move;
   width: 98%;
   float: left;
   padding: 5px;
@@ -22,11 +23,12 @@ p {
   padding-top: 10px;
   padding-left: 10px;
   color: aliceblue;
-  background-color: rgb(39, 41, 128);
+  background-color: rgb(128, 39, 66);
   border-radius: 25px;
 }
 
 .placeholder {
+  
   width: 150px;
   height: 200px;
   background-repeat: no-repeat;
@@ -35,12 +37,7 @@ p {
   background-image: url("https://stackblitz.com/files/react-irx9rm/github/aidenspro/react-irx9rm/master/src/Components/images/cardBack.jpg");
 }
 
-.unselected-button{
-  color: gray
-}
-.selected-button{
-  background-color: rgb(119, 119, 231)
-}
+
 img.hover-zoom:hover {
   transform-origin: center;
   transform: scale(1.75);
@@ -61,17 +58,13 @@ img.hover-zoom:hover {
 }
 
 .mydiv {
-  position: absolute;
+
+  cursor: move;
   z-index: 9;
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
+  width: fit-content;
+  float: left;
+  background-color: #ccbcbc;
+  border: 5px solid #100b0b;
   text-align: center;
 }
 
-.mydivheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
-}
