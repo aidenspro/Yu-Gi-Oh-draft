@@ -7,16 +7,17 @@
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
     "domain": "0.0.1",
-    "events": "^3.3.0",
+    "events": "3.3.0",
     "https": "1.0.0",
     "null": "2.0.0",
+    "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-dnd": "14.0.4",
     "react-dom": "17.0.2",
     "react-dropzone": "11.4.2",
     "react-native": "0.66.3",
-    "supports-color": "^9.2.1",
-    "tty": "^1.0.1"
+    "supports-color": "9.2.1",
+    "tty": "1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

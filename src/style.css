@@ -27,8 +27,8 @@ p {
 }
 
 .placeholder {
-  width: 150;
-  height: 200;
+  width: 150px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 10px;

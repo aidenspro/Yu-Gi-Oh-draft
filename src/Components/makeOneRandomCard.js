@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import DragElement from '../Components/dragElement'
+import DragMove from '../Components/dragMove'
 
 var key;
+
+
 
 function getJson() {
   const [card, setCard] = useState([]);
@@ -16,7 +18,6 @@ function getJson() {
         setCard(data); // setting obj using setObj
       })
       .then(() => {
-        console.log(card); // Here it returns correct data from localhost:5000/users
         return card;
       });
   }, []);
@@ -25,6 +26,20 @@ function getJson() {
 }
 
 function makeCard(card) {
+
+  const [translate, setTranslate] = useState({
+    x: 0,
+    y: 0
+  });
+
+  const handleDragMove = (e) => {
+    setTranslate({
+      x: translate.x + e.movementX,
+      y: translate.y + e.movementY
+    });
+  };
+
+
   const cID = card.id;
   const cName = card.name;
   key = cID;
@@ -33,18 +48,22 @@ function makeCard(card) {
   src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
   alt={cName}
   id={cID}
-  className="mydivheader"
+  //className="hover-zoom"
   height={200}
   width={150}
 />
   return (
-    <DragElement finCard={finCard} />
+    <DragMove onDragMove={handleDragMove}>
+          <div
+            style={{
+              transform: `translateX(${translate.x}px) translateY(${translate.y}px)`
+            }}
+          >
+            {finCard}
+          </div>
+        </DragMove>
     //finCard
   );
-}
-
-function _render(card) {
-  return JSON.stringify(card);
 }
 
 export default function makeOneRandomCard() {

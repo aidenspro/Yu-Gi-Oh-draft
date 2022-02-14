@@ -5,8 +5,6 @@ import { useDrop } from 'react-dnd';
 
 import '../style.css';
 
-var moveCard;
-
 function dragElement(elmnt) {
   var pos1 = 0,
     pos2 = 0,
@@ -14,6 +12,7 @@ function dragElement(elmnt) {
     pos4 = 0;
   if (document.getElementById(elmnt.id)) {
     /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id).setAttribute('draggable', false);
     document.getElementById(elmnt.id).onmousedown = dragMouseDown;
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
@@ -51,8 +50,9 @@ function dragElement(elmnt) {
   }
 }
 
-export default function dragElement(props) {
-  moveCard = props.finCard;
+export default function dragTheElement(props) {
+  const moveCard = props.finCard;
   dragElement(moveCard);
-  return props.finCard;
+
+  return moveCard;
 }

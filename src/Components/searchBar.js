@@ -5,7 +5,6 @@ import SearchCard from '../Components/searchCard';
 
 const cardDisplay = (searchTerm) => {
 
-  console.log("here" + searchTerm)
   if(searchTerm.length > 1)
   return <SearchCard searchTerm ={searchTerm} />;
   else

@@ -5,6 +5,7 @@ import DraftedCards from './Components/draftedCards';
 import SearchBar from './Components/searchBar';
 import Example from './Components/testButton';
 import NumButtons, { buttValue } from './Components/numButtons';
+
 import './style.css';
 
 
@@ -12,7 +13,6 @@ export default function App() {
   var [] = useState(0);
 
   
-
   return (
     <body className='bg'>
       
@@ -25,7 +25,10 @@ export default function App() {
         <NumButtons />
         
         <Example />
+
+        
       </div>
+
     </div>
     </body>
   );
