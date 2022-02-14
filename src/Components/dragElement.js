@@ -5,6 +5,8 @@ import { useDrop } from 'react-dnd';
 
 import '../style.css';
 
+var moveCard;
+
 function dragElement(elmnt) {
   var pos1 = 0,
     pos2 = 0,
@@ -50,6 +52,7 @@ function dragElement(elmnt) {
 }
 
 export default function dragElement(props) {
-  //dragElement(props.finCard);
+  moveCard = props.finCard;
+  dragElement(moveCard);
   return props.finCard;
 }

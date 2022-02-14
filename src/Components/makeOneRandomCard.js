@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DragElement from '../Components/searchCard'
+import DragElement from '../Components/dragElement'
 
 var key;
 
@@ -39,6 +39,7 @@ function makeCard(card) {
 />
   return (
     <DragElement finCard={finCard} />
+    //finCard
   );
 }
 
