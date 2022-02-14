@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import DragElement from '../Components/searchCard'
 
 var key;
 
@@ -27,17 +28,17 @@ function makeCard(card) {
   const cID = card.id;
   const cName = card.name;
   key = cID;
+
+  var finCard = <img
+  src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
+  alt={cName}
+  id={cID}
+  className="mydivheader"
+  height={200}
+  width={150}
+/>
   return (
-    <img
-    
-      src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
-      //alt={cName}
-      
-      //alt={'' +1+ '.jpg'}
-      className="placeholder hover-zoom"
-      height={200}
-      width={150}
-    />
+    <DragElement finCard={finCard} />
   );
 }
 

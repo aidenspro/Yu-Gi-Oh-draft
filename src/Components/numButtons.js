@@ -43,7 +43,7 @@ function numButtons() {
   var [num, setNum] = useState(5);
 
   useEffect(() => {    
-    // Update the document title using the browser API    
+    //Update the document title using the browser API    
     cardDisplay(num)});
 
   return(

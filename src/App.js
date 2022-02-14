@@ -11,18 +11,11 @@ import './style.css';
 export default function App() {
   var [] = useState(0);
 
-  if (buttValue === undefined) {
-    buttValue = 1;
-  }
-
-  //numCards = buttValue;
-  console.log(buttValue);
-  
-
   
 
   return (
     <body className='bg'>
+      
     <div id="topDiv">
       <div id="searchStuff">
         <SearchBar />
