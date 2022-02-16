@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import DragMove from '../Components/dragMove';
+import '../style.css';
 
-var key;
+var key = 0;
 
 
 function getJson() {
@@ -40,16 +41,24 @@ function makeCard(card) {
 
   const cID = card.id;
   const cName = card.name;
-  key = cID;
+  key++;
+
+  function handleOnClick(img){
+    console.log("clickDown",img.id)
+  }
+  function handleOnRelease(img){
+    console.log("clickUp",img.id)
+  }
 
   var finCard = (
     <img
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
       draggable="false"
-      zIndex={0}
-      style={{}}
+      position="relative"
       alt={cName}
       id={cID}
+      onMouseDown={() => handleOnClick(document.getElementById(cID))}
+      onMouseUp={() => handleOnRelease(document.getElementById(cID))}
       //className="cardimage"
       height={200}
       width={150}
@@ -61,7 +70,7 @@ function makeCard(card) {
       <div
         className="mydiv"
         style={{
-          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
+          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,zIndex: 10
         }}
         
       >
@@ -71,6 +80,7 @@ function makeCard(card) {
     //finCard
   );
 }
+
 
 export default function makeOneRandomCard(prop) {
   
