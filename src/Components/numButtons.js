@@ -34,7 +34,7 @@ function numButtons() {
     cardDisplay(num)});
 
   return(
-  <div>
+  <div position="fixed">
     <button id="button1" className="unselected-button"  onClick={() => setNum(5)}>
       5{' '}
     </button>

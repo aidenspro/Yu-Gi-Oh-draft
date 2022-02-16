@@ -45,9 +45,11 @@ function makeCard(card) {
 
   function handleOnClick(img){
     console.log("clickDown",img.id)
+    img.className="active";
   }
   function handleOnRelease(img){
     console.log("clickUp",img.id)
+    img.className="myDiv";
   }
 
   var finCard = (
@@ -57,8 +59,8 @@ function makeCard(card) {
       position="relative"
       alt={cName}
       id={cID}
-      onMouseDown={() => handleOnClick(document.getElementById(cID))}
-      onMouseUp={() => handleOnRelease(document.getElementById(cID))}
+      onMouseDown={() => handleOnClick(document.getElementById(cID).parentElement)}
+      onMouseUp={() => handleOnRelease(document.getElementById(cID).parentElement)}
       //className="cardimage"
       height={200}
       width={150}
@@ -70,7 +72,7 @@ function makeCard(card) {
       <div
         className="mydiv"
         style={{
-          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,zIndex: 10
+          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
         }}
         
       >

@@ -7,11 +7,11 @@ p {
 }
 
 .float-child {
+
   display: inline-grid;
   grid-template-columns: 170px 170px 170px 170px 170px;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
-  cursor: move;
   width: 97%;
   padding: 10px;
   border: 5px solid;
@@ -62,11 +62,12 @@ img.hover-zoom:hover {
 
 .mydiv {
   position: relative;
+  height: auto;
+  width: auto;
   cursor: move;
   z-index: 0;
-  width: fit-content;
   float: left;
-  background-color: #ccbcbc;
+ 
   border: 5px solid #100b0b;
   text-align: center;
 }
@@ -82,6 +83,10 @@ img.hover-zoom:hover {
 }
 
 .active{
-  z-index: 1;
-  border: 10px solid #100b0b;
+  position: relative;
+  height: auto;
+  width: auto;
+  z-index: 10;
+  border: 10px solid #fafd12;
+  border-radius: 5px;
 }

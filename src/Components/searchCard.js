@@ -11,7 +11,7 @@ function getJson() {
         return response.json();
       })
       .then((data) => {
-        setCard(data.data[0]); // setting obj using setObj
+        setCard(data.data); // setting obj using setObj
       })
       .then(() => {
         return card;
@@ -20,10 +20,24 @@ function getJson() {
   return card;
 }
 
-function makeCard(card) {
-  const cID = card.id;
-  const cName = card.name;
+function makeCard(cards) {
+  console.log(cards)
+  console.log(cards.length)
+  var cID = cards.id;
+  var cName = cards.name;
   var error;
+  if(cards.length == 0){
+    return (
+      <img
+        src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
+        alt={cName}
+        //alt={'' +1+ '.jpg'}
+        className="placeholder hover-zoom"
+        height={200}
+        width={150}
+      />
+    );
+  }
   return (
     <img
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
