@@ -17,7 +17,7 @@ export default function DragMove(props) {
 
   const handlePointerDown = (e) => {
     setIsDragging(true);
-
+    
     onPointerDown(e);
   };
   

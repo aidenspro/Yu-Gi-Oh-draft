@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DragMove from '../Components/dragMove';
 
 var key;
-var z;
+
 
 function getJson() {
   const [card, setCard] = useState([]);
@@ -25,6 +25,7 @@ function getJson() {
 }
 
 function makeCard(card) {
+  var z;
   const [translate, setTranslate] = useState({
     x: 0,
     y: 0,
@@ -44,20 +45,23 @@ function makeCard(card) {
   var finCard = (
     <img
       src={'https://storage.googleapis.com/ygoprodeck.com/pics/' + cID + '.jpg'}
+      draggable="false"
+      zIndex={0}
+      style={{}}
       alt={cName}
       id={cID}
-      //className="hover-zoom"
+      //className="cardimage"
       height={200}
       width={150}
     />
   );
-    console.log(z)
+    
   return (
     <DragMove onDragMove={handleDragMove}>
       <div
         className="mydiv"
         style={{
-          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,zIndex: z
+          transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
         }}
         
       >
@@ -69,6 +73,6 @@ function makeCard(card) {
 }
 
 export default function makeOneRandomCard(prop) {
-  z = prop.count;
+  
   return makeCard(getJson());
 }

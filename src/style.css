@@ -58,9 +58,9 @@ img.hover-zoom:hover {
 }
 
 .mydiv {
-
+  position: relative;
   cursor: move;
-  z-index: 9;
+  z-index: 0;
   width: fit-content;
   float: left;
   background-color: #ccbcbc;
@@ -68,3 +68,12 @@ img.hover-zoom:hover {
   text-align: center;
 }
 
+.cardimage{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  ser-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}

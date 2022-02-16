@@ -19,7 +19,7 @@ function numButtons() {
   
       for(var i=0;i<numCards;i++){
         cardArray[i]=
-        <MakeOneRandomCard count={i}/>
+        <MakeOneRandomCard />
       }
       return (
         cardArray
