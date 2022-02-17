@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 var searchTerm;
 
 function getJson() {
@@ -11,7 +12,7 @@ function getJson() {
         return response.json();
       })
       .then((data) => {
-        setCard(data.data[0]); // setting obj using setObj
+        setCard(data.data[o]); // setting obj using setObj
       })
       .then(() => {
         return card;
@@ -27,6 +28,7 @@ function _render(card) {
 export default function makeSearchCard(props) {
   
   searchTerm = props.searchTerm;
-  
-  return  getJson();
+  const searchJson = getJson();
+  console.log(searchJson);
+  return  searchJson;
 }

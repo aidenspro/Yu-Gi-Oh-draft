@@ -6,7 +6,7 @@ function getJson() {
   const [card, setCard] = useState([]);
 
   useEffect(() => {
-    fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname='+searchTerm)
+    fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + searchTerm)
       .then((response) => {
         return response.json();
       })
@@ -41,8 +41,7 @@ function _render(card) {
 }
 
 export default function makeSearchCard(props) {
-  
   searchTerm = props.searchTerm;
-  
-  return  makeCard(getJson());
+
+  return makeCard(getJson());
 }
