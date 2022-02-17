@@ -7,7 +7,6 @@ p {
 }
 
 .float-child {
-
   display: inline-grid;
   grid-template-columns: 170px 170px 170px 170px 170px;
   grid-column-gap: 20px;
@@ -17,10 +16,10 @@ p {
   border: 5px solid;
   background-color: rgb(39, 41, 128);
   border-radius: 25px;
-  
+  overflow: scroll;
 }
 
-.search-return{
+.search-return {
   width: 170px;
   height: 210px;
   padding-top: 10px;
@@ -31,15 +30,13 @@ p {
 }
 
 .placeholder {
-  
   width: 150px;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 10px;
-  background-image: url("https://stackblitz.com/files/react-irx9rm/github/aidenspro/react-irx9rm/master/src/Components/images/cardBack.jpg");
+  background-image: url('https://stackblitz.com/files/react-irx9rm/github/aidenspro/react-irx9rm/master/src/Components/images/cardBack.jpg');
 }
-
 
 img.hover-zoom:hover {
   transform-origin: center;
@@ -51,42 +48,31 @@ img.hover-zoom:hover {
   background-image: url('https://t4.ftcdn.net/jpg/02/59/38/19/360_F_259381930_dtHx7LYQwMBcpljvRqGxWl4fTgzm4JIY.jpg');
 
   /* Full height */
-  height: 100vh; 
+  height: 100vh;
   width: 100vw;
-  /* Center and scale the image nicely */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .mydiv {
   position: relative;
-  height: auto;
-  width: auto;
+  height: 96.5%;
+  width: 101.5%;
   cursor: move;
   z-index: 0;
-  float: left;
- 
-  border: 5px solid #100b0b;
-  text-align: center;
+  border: 3px solid #100b0b;
 }
 
-.cardimage{
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  ser-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-.active{
+.active {
+  cursor: move;
   position: relative;
-  height: auto;
-  width: auto;
+  height: 96.5%;
+  width: 101.5%;
   z-index: 10;
-  border: 10px solid #fafd12;
-  border-radius: 5px;
+  border: 3px solid #fafd12;
 }

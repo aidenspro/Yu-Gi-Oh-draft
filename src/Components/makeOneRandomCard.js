@@ -46,10 +46,18 @@ function makeCard(card) {
   function handleOnClick(img){
     console.log("clickDown",img.id)
     img.className="active";
+    const rect = img.getBoundingClientRect()
+    const xCenter = (rect.left + rect.right) / 2
+    const yCenter = (rect.top + rect.bottom) / 2
+    console.log(xCenter + " " + yCenter)
   }
   function handleOnRelease(img){
     console.log("clickUp",img.id)
     img.className="myDiv";
+    const rect = img.getBoundingClientRect()
+    const xCenter = (rect.left + rect.right) / 2
+    const yCenter = (rect.top + rect.bottom) / 2
+    console.log(xCenter + " " + yCenter)
   }
 
   var finCard = (
@@ -62,8 +70,8 @@ function makeCard(card) {
       onMouseDown={() => handleOnClick(document.getElementById(cID).parentElement)}
       onMouseUp={() => handleOnRelease(document.getElementById(cID).parentElement)}
       //className="cardimage"
-      height={200}
-      width={150}
+      height={225}
+      width={172}
     />
   );
     

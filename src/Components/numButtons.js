@@ -11,12 +11,8 @@ import DragMove from '../Components/dragMove'
 function numButtons() {
   var [num, setNum] = useState(5);
 
-  
-
   const cardDisplay = (numCards) => {
     var cardArray = [];
-  
-  
       for(var i=0;i<numCards;i++){
         cardArray[i]=
         <MakeOneRandomCard />
@@ -27,8 +23,6 @@ function numButtons() {
     
   };
   
-
-
   useEffect(() => {    
     //Update the document title using the browser API    
     cardDisplay(num)});

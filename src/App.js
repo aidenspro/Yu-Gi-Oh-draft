@@ -2,6 +2,7 @@ import React from 'react';
 import React, { useEffect, useState } from 'react';
 import MakeOneRandomCard from './Components/makeOneRandomCard';
 import DraftedCards from './Components/draftedCards';
+import TestCard from './Components/testCard'
 import SearchBar from './Components/searchBar';
 import Example from './Components/testButton';
 import NumButtons, { buttValue } from './Components/numButtons';
@@ -23,14 +24,11 @@ export default function App() {
 
       <div id="float-container">
         <NumButtons />
-        
-        <Example />
-
-        
+        <DraftedCards />
       </div>
 
     </div>
     </body>
   );
-  //return(<div></div>)
+  
 }
