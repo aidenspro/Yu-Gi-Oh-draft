@@ -13,9 +13,9 @@ import './style.css';
 export default function App() {
   var [] = useState(0);
 
-  
+  document.getElementById("root").className = "bg"
   return (
-    <body className='bg'>
+    
       
     <div id="topDiv">
       <div id="searchStuff">
@@ -28,7 +28,7 @@ export default function App() {
       </div>
 
     </div>
-    </body>
+    
   );
   
 }
