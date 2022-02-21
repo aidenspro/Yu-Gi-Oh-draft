@@ -22,6 +22,8 @@ function numButtons() {
       );
     
   };
+
+  
   
   useEffect(() => {    
     //Update the document title using the browser API    
